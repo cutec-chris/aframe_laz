@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="aframe_laz"/>
+    <Type Value="RunTimeOnly"/>
+    <AutoUpdate Value="Manually"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/"/>
+      </SearchPaths>
+      <Other>
+        <ExecuteBefore>
+          <Command Value="$MakeExe(IDE,pas2js) -O- -Jc -vbq aframe_laz.pas"/>
+          <Parsers Count="1">
+            <Item1 Value="Pas2JS"/>
+          </Parsers>
+        </ExecuteBefore>
+      </Other>
+      <SkipCompiler Value="True"/>
+    </CompilerOptions>
+    <Files Count="1">
+      <Item1>
+        <Filename Value="aframe.pas"/>
+        <UnitName Value="aframe"/>
+      </Item1>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="threejs_laz"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>
