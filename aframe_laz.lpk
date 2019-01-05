@@ -19,11 +19,15 @@
       </Other>
       <SkipCompiler Value="True"/>
     </CompilerOptions>
-    <Files Count="1">
+    <Files Count="2">
       <Item1>
         <Filename Value="aframe.pas"/>
         <UnitName Value="aframe"/>
       </Item1>
+      <Item2>
+        <Filename Value="afscene.pas"/>
+        <UnitName Value="afscene"/>
+      </Item2>
     </Files>
     <RequiredPkgs Count="1">
       <Item1>

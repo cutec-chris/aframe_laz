@@ -6,9 +6,33 @@ unit aframe;
 interface
 
 uses
-  js,web;
+  js,web,threejs;
 
 type
+  TJSAEntinity = Class external name 'a-entinity' (TJSElement)
+  Public
+    created : boolean;
+    computedMixinStr : string;
+    hasLoaded : boolean;
+    isNode : boolean;
+    mixinEls : TJSObject;
+    mixinObservers : TJSObject;
+    components : TJSObject;
+    initializingComponents : TJSObject;
+    componentsToUpdate : TJSObject;
+    isEntity : boolean;
+    isPlaying : boolean;
+    object3D : TJSobject3D;
+    object3DMap : TJSObject;
+    parentEl : TJSObject;
+    rotationObj : TJSObject;
+    states : TJSObject;
+    detached : boolean;
+    attached : boolean;
+    sceneEl : TJSObject;
+    attachedToParent : boolean;
+  end;
+
   TJSAFRAME = Class external name 'AFRAME'
   Public
     function AComponent(arg1: JSValue;arg2: JSValue;arg3: JSValue) : JSValue;
